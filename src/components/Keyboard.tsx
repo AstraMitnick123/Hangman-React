@@ -1,4 +1,4 @@
-import styles from "./Keyboard.module.css"
+import styles from "../Keyboard.module.css"
 
 const KEYS = [
   "a",
@@ -46,8 +46,7 @@ export function Keyboard({
     <div
       style={{
         display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(75px, 1fr))",
-        gap: ".5rem",
+        gridTemplateColumns:"repeat(auto-fit, minmax(50px, 1fr))", gap: "0.5em",
       }}
     >
       {KEYS.map(key => {

@@ -1,8 +1,10 @@
 import { useCallback, useEffect, useState } from "react"
-import { HangmanDrawing } from "./HangmanDrawing"
-import { HangmanWord } from "./HangmanWord"
-import { Keyboard } from "./Keyboard"
 import words from "./wordList.json"
+import { HangmanDrawing } from "./components/HangmanDrawing"
+import { HangmanWord } from "./components/HangmanWord"
+import { Keyboard } from "./components/Keyboard"
+
+///// Carlos Armando Larios Rojas - 20460440
 
 function getWord() {
   return words[Math.floor(Math.random() * words.length)]
@@ -66,7 +68,7 @@ function App() {
   return (
     <div
       style={{
-        maxWidth: "800px",
+      
         display: "flex",
         flexDirection: "column",
         gap: "2rem",
@@ -74,9 +76,9 @@ function App() {
         alignItems: "center",
       }}
     >
-      <div style={{ fontSize: "2rem", textAlign: "center" }}>
-        {isWinner && "Winner! - Refresh to try again"}
-        {isLoser && "Nice Try - Refresh to try again"}
+      <div style={{ fontSize: "1.6rem", textAlign: "center", fontWeight: "bold", fontFamily: "monospace" }}>
+        {isWinner && "Ganaste! - Vuelve a jugar"}
+        {isLoser && "Buen intento - Vuelve a jugar"}  
       </div>
       <HangmanDrawing numberOfGuesses={incorrectLetters.length} />
       <HangmanWord
