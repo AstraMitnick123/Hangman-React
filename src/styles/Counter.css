@@ -1,0 +1,9 @@
+
+.cajita {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  height: 100px;
+  width: 100%;
+  border-radius: 1rem;
+  padding: 20px 20px;
+}

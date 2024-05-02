@@ -1,3 +1,5 @@
+import { Counter } from "./Counter"
+
 const HEAD = (
   <div
     style={{
@@ -93,6 +95,9 @@ type HangmanDrawingProps = {
 
 export function HangmanDrawing({ numberOfGuesses }: HangmanDrawingProps) {
   return (
+
+    <div style={{display: "flex"}}>
+    <Counter/>
     <div style={{ position: "relative" }}>
       {BODY_PARTS.slice(0, numberOfGuesses)}
       <div
@@ -122,6 +127,7 @@ export function HangmanDrawing({ numberOfGuesses }: HangmanDrawingProps) {
         }}
       />
       <div style={{ height: "10px", width: "250px", background: "black" }} />
+    </div>
     </div>
   )
 }
